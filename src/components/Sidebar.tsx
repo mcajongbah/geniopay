@@ -90,11 +90,11 @@ const Sidebar: React.FC<SidebarProps> = ({}) => {
           <NavLink to={item.link} key={index}>
             {({ isActive }) => (
               <div
-                className={`flex items-center  px-5 py-4 ${
+                className={`flex items-center px-5 py-4 ${
                   isActive
                     ? "bg-white text-primary text-base"
-                    : "bg-inherit text-white text-sm"
-                }  rounded-lg`}
+                    : "bg-inherit text-white text-sm hover:bg-[#2b899d]"
+                }  rounded-lg transition-colors duration-200`}
               >
                 <div className="flex justify-center items-center space-x-4">
                   {item.icon}
@@ -118,7 +118,7 @@ const Sidebar: React.FC<SidebarProps> = ({}) => {
             </p>
           </span>
         </div>
-        <button className="w-full h-14 bg-primary rounded-lg text-white">
+        <button className="w-full h-14 hover:bg-[#2b899d] transition-colors duration-200 bg-primary rounded-lg text-white">
           Invite Friends
         </button>
       </div>
