@@ -1,10 +1,10 @@
-import { useState } from 'react'
+import { Layout } from './components'
 function App() {
 
   return (
-    <div className="text-3xl text-red-400 font-bold underline">
-      <h1>Hello</h1>
-    </div>
+    <>
+      <Layout />
+    </>
   );
 }
 
