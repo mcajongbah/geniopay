@@ -37,9 +37,8 @@ const navItems = [
 ];
 
 const Sidebar: React.FC<SidebarProps> = ({}) => {
-    // const router = useRouter();
   return (
-    <aside className="flex flex-col w-[316px] space-y-8 py-8 px-9 bg-primary">
+    <aside className="flex flex-col w-[316px] overflow-y-auto space-y-8 py-8 px-9 bg-primary">
       <div className="w-full flex justify-center">
         <Link to="/">
           <img src="./assets/logo.png" alt="GenioPay logo" />
