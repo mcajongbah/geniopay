@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { EyeIcon, StarIcon, WalletIcon } from "./Icons";
 
 type SidebarProps = {};
@@ -22,21 +22,22 @@ const navItems = [
   {
     title: "FX Centre",
     icon: <EyeIcon />,
-    link: "/",
+    link: "/fx-centre",
   },
   {
     title: "Beneficiaries",
     icon: <WalletIcon />,
-    link: "/wallet",
+    link: "/beneficiaries",
   },
   {
     title: "Perks",
     icon: <StarIcon />,
-    link: "/settings",
+    link: "/perks",
   },
 ];
 
 const Sidebar: React.FC<SidebarProps> = ({}) => {
+    // const router = useRouter();
   return (
     <aside className="flex flex-col w-[316px] space-y-8 py-8 px-9 bg-primary">
       <div className="w-full flex justify-center">
@@ -86,18 +87,22 @@ const Sidebar: React.FC<SidebarProps> = ({}) => {
 
       <div className="flex flex-col space-y-5">
         {navItems.map((item, index) => (
-          <Link to={item.link} key={index}>
-            <div
-              className={`flex items-center  px-5 py-4 ${
-                index === 0 ? "bg-white text-primary" : "bg-inherit text-white"
-              }  rounded-lg`}
-            >
-              <div className="flex justify-center space-x-4">
-                {item.icon}
-                <p className="text-sm font-normal">{item.title}</p>
+          <NavLink to={item.link} key={index}>
+            {({ isActive }) => (
+              <div
+                className={`flex items-center  px-5 py-4 ${
+                  isActive
+                    ? "bg-white text-primary text-base"
+                    : "bg-inherit text-white text-sm"
+                }  rounded-lg`}
+              >
+                <div className="flex justify-center items-center space-x-4">
+                  {item.icon}
+                  <p className="font-normal">{item.title}</p>
+                </div>
               </div>
-            </div>
-          </Link>
+            )}
+          </NavLink>
         ))}
       </div>
 
