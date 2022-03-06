@@ -11,14 +11,16 @@ const Layout: React.FC<LayoutProps> = ({}) => {
     <div className="flex flex-1 overflow-hidden h-screen w-full">
       <Sidebar />
 
-      <main className="flex flex-col flex-1 px-8">
+      <main className="flex flex-col flex-1">
         <Header />
         <div className="flex flex-1 flex-col overflow-y-auto">
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/wallet" element={<Wallet />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <div className="px-8 pb-10">
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/wallet" element={<Wallet />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </div>
         </div>
       </main>
     </div>
