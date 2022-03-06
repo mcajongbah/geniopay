@@ -80,7 +80,19 @@ const Wallet: React.FC<WalletProps> = ({}) => {
             </div>
           </div>
         </div>
-        <div className="w-3/5 bg-blue-400 h-9 p-4"></div>
+        <div className="w-3/5 px-12 py-4 bg-white">
+          <div className="flex justify-between rounded-2xl px-6 py-7 border border-[#F3F4F6] items-center">
+            <div className="flex flex-col space-y-1">
+              <div className="flex items-center space-x-1">
+                <span className="w-2 h-2 rounded-full bg-green-500"></span>
+                <p className="text-green-500 text-xs">Active</p>
+              </div>
+              <p className="text-base text-[#001B21]">EUR Wallet</p>
+              <p className="text-base text-[#0A6375]">EUR</p>
+            </div>
+            <p className="text-[40px] text-[#001B21] font-extrabold">€2,000,000.50</p>
+          </div>
+        </div>
       </div>
     </div>
   );
