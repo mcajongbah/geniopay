@@ -131,8 +131,7 @@ const Dashboard: React.FC<DashboardProps> = ({}) => {
 
         <div className="flex justify-end space-x-16">
           {transactions.map((transaction, index) => (
-            <div className="flex items-center space-x-4">
-              <>
+            <div key={index} className="flex items-center space-x-4">
                 {transaction.icon}
                 <span className="flex flex-col">
                   <p className="text-[#2b4146] text-sm">{transaction.name}</p>
@@ -140,7 +139,6 @@ const Dashboard: React.FC<DashboardProps> = ({}) => {
                     {transaction.value}
                   </p>
                 </span>
-              </>
             </div>
           ))}
         </div>
