@@ -11,7 +11,7 @@ const Layout: React.FC<LayoutProps> = ({}) => {
     <div className="flex flex-1 overflow-hidden h-screen w-full">
       <Sidebar />
 
-      <main className="flex flex-col flex-1">
+      <main className="flex flex-col flex-1 bg-[#FCFDFE]">
         <Header />
         <div className="flex flex-1 flex-col overflow-y-auto">
           <div className="px-8 pb-10">
