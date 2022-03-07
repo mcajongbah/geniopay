@@ -1,7 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { LineChart, QuickLinkCard, WalletCard } from "../components";
-import { WalletIcon } from "../components/Icons";
+import {
+  PayInIcon,
+  PayOutIcon,
+  StatusIcon,
+  WalletIcon,
+} from "../components/Icons";
 
 type DashboardProps = {};
 
@@ -32,31 +37,38 @@ const wallets = [
 const quickLinks = [
   {
     name: "Add new Wallet",
-    icon: <WalletIcon />,
+    icon: "./assets/wallet-2.svg",
+    color: "bg-[#F97316]",
   },
   {
     name: "Add new Card",
-    icon: <WalletIcon />,
+    icon: "./assets/card.svg",
+    color: "bg-[#005061]",
   },
   {
     name: "Balance Exchange",
-    icon: <WalletIcon />,
+    icon: "./assets/dollar-square.svg",
+    color: "bg-[#F59E0B]",
   },
   {
     name: "Transfer to Account",
-    icon: <WalletIcon />,
+    icon: "./assets/arrange-circle.svg",
+    color: "bg-[#5EEAD4]",
   },
   {
     name: "Generate Voucher",
-    icon: <WalletIcon />,
+    icon: "./assets/ticket.svg",
+    color: "bg-[#9333EA]",
   },
   {
     name: "Mobile Money",
-    icon: <WalletIcon />,
+    icon: "./assets/money.svg",
+    color: "bg-[#FFCB00]",
   },
   {
     name: "Payment Link",
-    icon: <WalletIcon />,
+    icon: "./assets/link-2.svg",
+    color: "bg-[#F43F5E]",
   },
 ];
 
@@ -64,17 +76,17 @@ const transactions = [
   {
     name: "Total transactions",
     value: "$88,600.00",
-    icon: <WalletIcon />,
+    icon: <StatusIcon />,
   },
   {
     name: "Pay-In",
     value: "$4,600.00",
-    icon: <WalletIcon />,
+    icon: <PayInIcon />,
   },
   {
     name: "Pay-Out",
     value: "$72,600.00",
-    icon: <WalletIcon />,
+    icon: <PayOutIcon />,
   },
 ];
 
@@ -132,13 +144,11 @@ const Dashboard: React.FC<DashboardProps> = ({}) => {
         <div className="flex justify-end space-x-16">
           {transactions.map((transaction, index) => (
             <div key={index} className="flex items-center space-x-4">
-                {transaction.icon}
-                <span className="flex flex-col">
-                  <p className="text-[#2b4146] text-sm">{transaction.name}</p>
-                  <p className="text-[#001B21] text-base">
-                    {transaction.value}
-                  </p>
-                </span>
+              <span>{transaction.icon}</span>
+              <span className="flex flex-col">
+                <p className="text-[#2b4146] text-sm">{transaction.name}</p>
+                <p className="text-[#001B21] text-base">{transaction.value}</p>
+              </span>
             </div>
           ))}
         </div>

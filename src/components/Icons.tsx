@@ -165,7 +165,7 @@ export const PayInIcon = () => {
     >
       <path
         d="M3.33325 11.6673L12.6666 2.33398"
-        stroke="currentColor"
+        stroke="#16A34A"
         strokeWidth="1.5"
         strokeMiterlimit="10"
         strokeLinecap="round"
@@ -173,7 +173,7 @@ export const PayInIcon = () => {
       />
       <path
         d="M3.33325 4.82031V11.667H10.1799"
-        stroke="currentColor"
+        stroke="#16A34A"
         strokeWidth="1.5"
         strokeMiterlimit="10"
         strokeLinecap="round"
@@ -181,7 +181,7 @@ export const PayInIcon = () => {
       />
       <path
         d="M2.33325 14.666H13.6666"
-        stroke="currentColor"
+        stroke="#16A34A"
         strokeWidth="1.5"
         strokeMiterlimit="10"
         strokeLinecap="round"
@@ -244,7 +244,7 @@ export const PayOutIcon = () => {
     >
       <path
         d="M2.33325 15.166H13.6666"
-        stroke="currentColor"
+        stroke="#DC2626"
         strokeWidth="1.5"
         strokeMiterlimit="10"
         strokeLinecap="round"
@@ -252,7 +252,7 @@ export const PayOutIcon = () => {
       />
       <path
         d="M3.33325 2.83398L12.6666 12.1673"
-        stroke="currentColor"
+        stroke="#DC2626"
         strokeWidth="1.5"
         strokeMiterlimit="10"
         strokeLinecap="round"
@@ -260,7 +260,7 @@ export const PayOutIcon = () => {
       />
       <path
         d="M3.33325 9.68065V2.83398H10.1799"
-        stroke="currentColor"
+        stroke="#DC2626"
         strokeWidth="1.5"
         strokeMiterlimit="10"
         strokeLinecap="round"
@@ -316,6 +316,57 @@ export const StatusIcon = () => {
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export const DashboardIcon = () => {
+  return (
+    <svg
+      width="24"
+      height="25"
+      viewBox="0 0 24 25"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M22 8.56102V4.02102C22 2.61102 21.36 2.04102 19.77 2.04102H15.73C14.14 2.04102 13.5 2.61102 13.5 4.02102V8.55102C13.5 9.97102 14.14 10.531 15.73 10.531H19.77C21.36 10.541 22 9.97102 22 8.56102Z"
+        fill="currentColor"
+      />
+      <path
+        d="M22 19.811V15.771C22 14.181 21.36 13.541 19.77 13.541H15.73C14.14 13.541 13.5 14.181 13.5 15.771V19.811C13.5 21.401 14.14 22.041 15.73 22.041H19.77C21.36 22.041 22 21.401 22 19.811Z"
+        fill="currentColor"
+      />
+      <path
+        d="M10.5 8.56102V4.02102C10.5 2.61102 9.86 2.04102 8.27 2.04102H4.23C2.64 2.04102 2 2.61102 2 4.02102V8.55102C2 9.97102 2.64 10.531 4.23 10.531H8.27C9.86 10.541 10.5 9.97102 10.5 8.56102Z"
+        fill="currentColor"
+      />
+      <path
+        d="M10.5 19.811V15.771C10.5 14.181 9.86 13.541 8.27 13.541H4.23C2.64 13.541 2 14.181 2 15.771V19.811C2 21.401 2.64 22.041 4.23 22.041H8.27C9.86 22.041 10.5 21.401 10.5 19.811Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
+
+export const Wallet2Icon = () => {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M14.6667 7.31281V8.68615C14.6667 9.05281 14.3733 9.35281 14 9.36615H12.6933C11.9733 9.36615 11.3133 8.83948 11.2533 8.11948C11.2133 7.69948 11.3733 7.30615 11.6533 7.03281C11.9 6.77948 12.24 6.63281 12.6133 6.63281H14C14.3733 6.64615 14.6667 6.94615 14.6667 7.31281Z"
+        fill="currentColor"
+      />
+      <path
+        d="M13.6466 10.3673H12.6933C11.4266 10.3673 10.36 9.41398 10.2533 8.20065C10.1933 7.50732 10.4466 6.81398 10.9533 6.32065C11.38 5.88065 11.9733 5.63398 12.6133 5.63398H13.6466C13.84 5.63398 14 5.47398 13.98 5.28065C13.8333 3.66065 12.76 2.55398 11.1666 2.36732C11.0066 2.34065 10.84 2.33398 10.6666 2.33398H4.66665C4.47998 2.33398 4.29998 2.34732 4.12665 2.37398C2.42665 2.58732 1.33331 3.85398 1.33331 5.66732V10.334C1.33331 12.174 2.82665 13.6673 4.66665 13.6673H10.6666C12.5333 13.6673 13.82 12.5007 13.98 10.7207C14 10.5273 13.84 10.3673 13.6466 10.3673ZM8.66665 6.50065H4.66665C4.39331 6.50065 4.16665 6.27398 4.16665 6.00065C4.16665 5.72732 4.39331 5.50065 4.66665 5.50065H8.66665C8.93998 5.50065 9.16665 5.72732 9.16665 6.00065C9.16665 6.27398 8.93998 6.50065 8.66665 6.50065Z"
+        fill="currentColor"
       />
     </svg>
   );

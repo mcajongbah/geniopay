@@ -1,17 +1,17 @@
 import { Link, NavLink } from "react-router-dom";
-import { EyeIcon, StarIcon, WalletIcon } from "./Icons";
+import { DashboardIcon, EyeIcon, StarIcon, Wallet2Icon, WalletIcon } from "./Icons";
 
 type SidebarProps = {};
 
 const navItems = [
   {
     title: "Dashboard",
-    icon: <EyeIcon />,
+    icon: <DashboardIcon />,
     link: "/",
   },
   {
     title: "Wallet",
-    icon: <WalletIcon />,
+    icon: <Wallet2Icon />,
     link: "/wallet",
   },
   {

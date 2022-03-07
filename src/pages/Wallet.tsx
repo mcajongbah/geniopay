@@ -1,6 +1,13 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import { LineChart, Search } from "../components";
-import { ExchangeIcon, PayInIcon, PayOutIcon, SendIcon, StatusIcon } from "../components/Icons";
+import {
+  ExchangeIcon,
+  PayInIcon,
+  PayOutIcon,
+  SendIcon,
+  StatusIcon,
+} from "../components/Icons";
 
 type WalletProps = {};
 
@@ -16,7 +23,7 @@ const Wallet: React.FC<WalletProps> = ({}) => {
       </div>
 
       <div className="w-full flex space-x-8 px-4 mt-6">
-        <div className="w-2/5 px-2 py-4 bg-white">
+        <div className="w-2/5 h-max rounded-lg px-2 py-4 bg-white">
           <div className="flex justify-between items-center">
             <Search />
             <select
@@ -31,11 +38,41 @@ const Wallet: React.FC<WalletProps> = ({}) => {
           </div>
 
           <div className="flex items-center text-[#001B21] mt-6 justify-between">
-            <button className="text-center py-[6px] px-7 border-b-4 border-primary">
-              Active(3)
-            </button>
-            <button className="text-center py-[6px] px-7">Inactive(2)</button>
-            <button className="text-center py-[6px] px-7">Closed(0)</button>
+            <NavLink to="/wallet">
+              {({ isActive }) => (
+                <button
+                  className={`text-center py-[6px] px-7 ${
+                    isActive ? "border-b-4 border-primary" : ""
+                  }`}
+                >
+                  Active(3)
+                </button>
+              )}
+            </NavLink>
+
+            <NavLink to="/wallet/inactive">
+              {({ isActive }) => (
+                <button
+                  className={`text-center py-[6px] px-7 ${
+                    isActive ? "border-b-4 border-primary" : ""
+                  }`}
+                >
+                  Inactive(2)
+                </button>
+              )}
+            </NavLink>
+
+            <NavLink to="/wallet/closed">
+              {({ isActive }) => (
+                <button
+                  className={`text-center py-[6px] px-7 ${
+                    isActive ? "border-b-4 border-primary" : ""
+                  }`}
+                >
+                  Closed(0)
+                </button>
+              )}
+            </NavLink>
           </div>
           <div className="flex flex-col space-y-4 mt-8">
             <div className="flex items-center rounded-lg p-4 bg-[#EEF7F9] justify-between">
@@ -81,7 +118,7 @@ const Wallet: React.FC<WalletProps> = ({}) => {
             </div>
           </div>
         </div>
-        <div className="w-3/5 px-12 py-4 bg-white">
+        <div className="w-3/5 rounded-lg px-12 py-4 bg-white">
           <div className="flex justify-between rounded-2xl px-6 py-7 border border-[#F3F4F6] items-center">
             <div className="flex flex-col space-y-1">
               <div className="flex items-center space-x-1">
