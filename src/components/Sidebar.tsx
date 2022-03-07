@@ -1,5 +1,15 @@
 import { Link, NavLink } from "react-router-dom";
-import { DashboardIcon, EyeIcon, StarIcon, Wallet2Icon, WalletIcon } from "./Icons";
+import {
+  CardIcon,
+  DashboardIcon,
+  DollarSquareIcon,
+  EyeIcon,
+  StarIcon,
+  TagIcon,
+  UserIcon,
+  Wallet2Icon,
+  WalletIcon,
+} from "./Icons";
 
 type SidebarProps = {};
 
@@ -16,22 +26,22 @@ const navItems = [
   },
   {
     title: "Cards",
-    icon: <StarIcon />,
+    icon: <CardIcon />,
     link: "/settings",
   },
   {
     title: "FX Centre",
-    icon: <EyeIcon />,
+    icon: <DollarSquareIcon />,
     link: "/fx-centre",
   },
   {
     title: "Beneficiaries",
-    icon: <WalletIcon />,
+    icon: <UserIcon />,
     link: "/beneficiaries",
   },
   {
     title: "Perks",
-    icon: <StarIcon />,
+    icon: <TagIcon />,
     link: "/perks",
   },
 ];
@@ -96,7 +106,9 @@ const Sidebar: React.FC<SidebarProps> = ({}) => {
                 }  rounded-lg transition-colors duration-200`}
               >
                 <div className="flex justify-center items-center space-x-4">
-                  {item.icon}
+                  <span className={`${isActive ? "scale-[2]" : ""}`}>
+                    {item.icon}
+                  </span>
                   <p className="font-normal">{item.title}</p>
                 </div>
               </div>
