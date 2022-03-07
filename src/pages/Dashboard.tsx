@@ -101,31 +101,31 @@ const Dashboard: React.FC<DashboardProps> = ({}) => {
         </Link>
       </div>
 
-      <div className="grid grid-cols-3 mt-4 gap-x-4">
+      <div className="grid grid-cols-1 lg:grid-cols-3 mt-4 gap-y-4 lg:gap-y-0 lg:gap-x-4">
         {wallets.map((wallet, index) => (
           <WalletCard wallet={wallet} key={index} />
         ))}
       </div>
 
-      <div className="flex mt-14 flex-col">
+      <div className="flex lg:mt-14 mt-7 flex-col">
         <p className="text-[#001B21] text-[21px]">Quick Links</p>
         <p className="text-base text-slate-400">
           Your frequently used actions for easy access.
         </p>
       </div>
 
-      <div className="flex space-x-4 mt-6 items-center">
+      <div className="flex w-full justify-between lg:justify-start flex-wrap gap-y-4 lg:gap-y-0 lg:space-x-4 mt-6 items-center">
         {quickLinks.map((link, index) => (
           <QuickLinkCard key={index} link={link} />
         ))}
       </div>
-      <div className="flex flex-col space-y-5">
-        <div className="flex justify-between items-center mt-[72px]">
-          <div className="flex space-x-9 items-center justify-center">
+      <div className="flex flex-col w-full space-y-5">
+        <div className="flex justify-between items-center mt-4 lg:mt-[72px]">
+          <div className="flex lg:space-x-9 space-x-2 items-center justify-center">
             <p className="text-[#001b21] text-[21px]">Activity</p>
 
             <select
-              className="outline-none text-primary text-base"
+              className="outline-none text-primary text-sm lg:text-base"
               name="activity"
               id="activity"
               value={activity}
@@ -136,18 +136,18 @@ const Dashboard: React.FC<DashboardProps> = ({}) => {
               <option value="Year">Year</option>
             </select>
           </div>
-          <button className="text-primary text-base">
+          <button className="text-primary text-sm lg:text-base">
             View Transaction History
           </button>
         </div>
 
-        <div className="flex justify-end space-x-16">
+        <div className="flex justify-between lg:justify-end lg:space-x-16">
           {transactions.map((transaction, index) => (
-            <div key={index} className="flex items-center space-x-4">
+            <div key={index} className="flex items-center space-x-2 lg:space-x-4">
               <span>{transaction.icon}</span>
               <span className="flex flex-col">
-                <p className="text-[#2b4146] text-sm">{transaction.name}</p>
-                <p className="text-[#001B21] text-base">{transaction.value}</p>
+                <p className="text-[#2b4146] text-xs">{transaction.name}</p>
+                <p className="text-[#001B21] text-sm">{transaction.value}</p>
               </span>
             </div>
           ))}

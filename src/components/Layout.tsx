@@ -14,7 +14,7 @@ const Layout: React.FC<LayoutProps> = ({}) => {
       <main className="flex flex-col flex-1 bg-[#FCFDFE]">
         <Header />
         <div className="flex flex-1 flex-col overflow-y-auto">
-          <div className="px-8 pb-10">
+          <div className="lg:px-8 px-0 pb-10">
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/wallet" element={<Wallet />} />

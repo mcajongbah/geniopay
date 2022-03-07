@@ -5,7 +5,7 @@ type SearchProps = {};
 const Search: React.FC<SearchProps> = ({}) => {
   const [search, setSearch] = useState("");
   return (
-    <div className="h-[53px] w-[304px] border space-x-4 border-[#AAC0C5] rounded-2xl flex items-center px-4">
+    <div className="lg:h-[53px] h-10 lg:w-[304px] w-52 border space-x-4 border-[#AAC0C5] rounded-2xl flex items-center px-4">
       <span className="text-[#55676B]">
         <svg
           xmlns="http://www.w3.org/2000/svg"

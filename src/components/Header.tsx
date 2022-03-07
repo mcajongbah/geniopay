@@ -5,9 +5,9 @@ type HeaderProps = {};
 
 const Header: React.FC<HeaderProps> = ({}) => {
   return (
-    <div className="w-full flex items-center h-[93px] px-8 justify-between">
-      <h5 className="text-[28px] font-semibold">Welcome, Huss Smith</h5>
-      <div className="flex items-center space-x-7">
+    <div className="w-full flex items-center h-14 border-b lg:border-b-0 lg:h-[93px] lg:px-8 px-4 justify-between">
+      <h5 className="lg:text-[28px] text-xl font-semibold">Welcome, Huss Smith</h5>
+      <div className="hidden lg:flex items-center space-x-7">
         <Search />
 
         <div className="flex items-center space-x-3">
