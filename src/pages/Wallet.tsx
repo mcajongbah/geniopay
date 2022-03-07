@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Search } from "../components";
+import { LineChart, Search } from "../components";
+import { ExchangeIcon, PayInIcon, PayOutIcon, SendIcon, StatusIcon } from "../components/Icons";
 
 type WalletProps = {};
 
@@ -90,8 +91,100 @@ const Wallet: React.FC<WalletProps> = ({}) => {
               <p className="text-base text-[#001B21]">EUR Wallet</p>
               <p className="text-base text-[#0A6375]">EUR</p>
             </div>
-            <p className="text-[40px] text-[#001B21] font-extrabold">€2,000,000.50</p>
+            <p className="text-[40px] text-[#001B21] font-extrabold">
+              €2,000,000.50
+            </p>
           </div>
+
+          <div className="grid grid-cols-2 gap-y-3 gap-x-8 mt-6">
+            <div className="flex items-center space-x-5">
+              <p className="text-body text-sm">Ledger Balance</p>
+              <p className="text-title text-base">2,000,000.50</p>
+            </div>
+            <div className="flex items-center space-x-5">
+              <p className="text-body text-sm">Total Incoming</p>
+              <p className="text-title text-base">€2,000,000.50</p>
+            </div>
+            <div className="flex items-center space-x-5">
+              <p className="text-body text-sm">Blocked Balance</p>
+              <p className="text-title text-base">€0.00</p>
+            </div>
+            <div className="flex items-center space-x-5">
+              <p className="text-body text-sm">Total Outgoing</p>
+              <p className="text-title text-base">€5,000,000.50</p>
+            </div>
+          </div>
+
+          <div className="flex mt-6 items-center justify-between">
+            <button className="outline-none w-[156px] flex items-center justify-center space-x-1 h-14 rounded-lg border border-primary text-primary">
+              <SendIcon />
+              <p>Payment</p>
+            </button>
+            <button className="outline-none w-[156px] flex items-center justify-center space-x-1 h-14 rounded-lg border border-primary text-primary">
+              <PayInIcon />
+              <p>Pay In</p>
+            </button>
+            <button className="outline-none w-[156px] flex items-center justify-center space-x-1 h-14 rounded-lg border border-primary text-primary">
+              <ExchangeIcon />
+              <p>Exchange</p>
+            </button>
+          </div>
+
+          <select
+            className="outline-none mt-6 text-primary text-base"
+            name="wallet"
+            id="wallet"
+          >
+            <option value="more options">More Options</option>
+          </select>
+
+          <div className="flex items-center text-[#001B21] mt-6">
+            <button className="text-center py-[6px] px-7 border-b-4 border-primary">
+              Activity
+            </button>
+            <button className="text-center py-[6px] px-7">Transactions</button>
+            <button className="text-center py-[6px] px-7">Invoices</button>
+          </div>
+
+          <div className="flex space-y-9 mb-8 items-end flex-col">
+            <div>
+              <select
+                className="outline-none mt-6 text-primary text-base"
+                name="wallet"
+                id="wallet"
+              >
+                <option value="month">Month</option>
+                <option value="year">Year</option>
+              </select>
+            </div>
+            <div className="flex w-full items-center justify-between">
+              <button className="flex items-center space-x-4">
+                <StatusIcon />
+                <span className="flex flex-col space-y-1 text-left">
+                  <p className="text-body text-sm">Total transactions</p>
+                  <p className="text-title font-bold text-base">$88,600.00</p>
+                </span>
+              </button>
+
+              <button className="flex outline-none text-[#16A34A] items-center space-x-4">
+                <PayInIcon />
+                <span className="flex flex-col space-y-1 text-left">
+                  <p className="text-body text-sm">Pay-In</p>
+                  <p className="text-title font-bold text-base">$4,600.00</p>
+                </span>
+              </button>
+
+              <button className="flex outline-none items-center text-[#DC2626] space-x-4">
+                <PayOutIcon />
+                <span className="flex flex-col space-y-1 text-left">
+                  <p className="text-body text-sm">Pay-Out</p>
+                  <p className="text-title font-bold text-base">$72,600.00</p>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <LineChart />
         </div>
       </div>
     </div>

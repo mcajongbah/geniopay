@@ -105,6 +105,7 @@ const LineChart: React.FC<LineChartProps> = ({}) => {
             .x((d) => x(dateParser(d.date)))
             .y((d) => y(d.value))
             .curve(d3.curveBasis)
+
         );
     }
   }, [data]);
