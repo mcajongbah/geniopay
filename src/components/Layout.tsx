@@ -9,11 +9,10 @@ type LayoutProps = {};
 
 const Layout: React.FC<LayoutProps> = ({}) => {
   const [isOpen, setIsOpen] = useState(false);
-
-  console.log(isOpen);
+  
   return (
     <div className="flex flex-1 overflow-hidden h-screen w-full">
-      <Sidebar isOpen={isOpen} />
+      <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
 
       <main className="flex flex-col flex-1 bg-[#FCFDFE]">
         <Header setIsOpen={setIsOpen} />
