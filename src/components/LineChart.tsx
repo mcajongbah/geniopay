@@ -96,7 +96,7 @@ const LineChart: React.FC<LineChartProps> = ({}) => {
         .datum(data)
         .attr("fill", "none")
         .attr("stroke", "#008AA8")
-        .attr("stroke-width", 5.89)
+        .attr("class", "lg:stroke-[5.89px] stroke-2")
         .attr("stroke-linecap", "round")
         .attr(
           "d",
@@ -105,7 +105,6 @@ const LineChart: React.FC<LineChartProps> = ({}) => {
             .x((d) => x(dateParser(d.date)))
             .y((d) => y(d.value))
             .curve(d3.curveBasis)
-
         );
     }
   }, [data]);
