@@ -1,13 +1,15 @@
 import { Search } from ".";
 import { NotificationIcon, TreeIcon } from "./Icons";
 
-type HeaderProps = {};
+type HeaderProps = {
+  setIsOpen: (isOpen: boolean) => void;
+};
 
-const Header: React.FC<HeaderProps> = ({}) => {
+const Header: React.FC<HeaderProps> = ({setIsOpen}) => {
   return (
     <div className="w-full flex items-center h-14 border-b lg:border-b-0 lg:h-[93px] lg:px-8 px-4 justify-between">
       <div className="flex space-x-2 items-center">
-        <button className="outline-none lg:hidden">
+        <button onClick={() => setIsOpen(true)} className="outline-none lg:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"

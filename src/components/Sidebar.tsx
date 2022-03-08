@@ -11,7 +11,9 @@ import {
   WalletIcon,
 } from "./Icons";
 
-type SidebarProps = {};
+type SidebarProps = {
+  isOpen: boolean;
+};
 
 const navItems = [
   {
@@ -46,9 +48,11 @@ const navItems = [
   },
 ];
 
-const Sidebar: React.FC<SidebarProps> = ({}) => {
+const Sidebar: React.FC<SidebarProps> = ({isOpen}) => {
   return (
-    <aside className="hidden lg:flex flex-col w-[316px] overflow-y-auto space-y-8 py-8 px-9 bg-primary">
+    <aside
+      className={`hidden absolute inset-0 z-50 lg:relative lg:flex flex-col w-[316px] overflow-y-auto space-y-8 py-8 px-9 bg-primary`}
+    >
       <div className="w-full flex justify-center">
         <Link to="/">
           <img src="./assets/logo.png" alt="GenioPay logo" />
