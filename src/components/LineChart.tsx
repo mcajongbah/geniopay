@@ -63,8 +63,8 @@ const LineChart: React.FC<LineChartProps> = ({}) => {
           .call((g) =>
             g
               .selectAll(".tick text")
+              .attr("class", "lg:text-2xl text-sm")
               .attr("fill", "#2B4146")
-              .attr("font-size", "21px")
           );
 
       const yAxis = (g) =>
@@ -83,8 +83,8 @@ const LineChart: React.FC<LineChartProps> = ({}) => {
           .call((g) =>
             g
               .selectAll(".tick text")
+              .attr("class", "lg:text-2xl text-sm")
               .attr("fill", "#2B4146")
-              .attr("font-size", "21px")
           );
 
       svg.append("g").call(xAxis);
