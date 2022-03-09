@@ -101,7 +101,7 @@ const Dashboard: React.FC<DashboardProps> = ({}) => {
         </Link>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 mt-4 gap-y-4 lg:gap-y-0 lg:gap-x-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 mt-4 gap-y-4 lg:gap-y-0 sm:gap-x-4">
         {wallets.map((wallet, index) => (
           <WalletCard wallet={wallet} key={index} />
         ))}
