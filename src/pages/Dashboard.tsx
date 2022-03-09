@@ -141,7 +141,7 @@ const Dashboard: React.FC<DashboardProps> = ({}) => {
           </button>
         </div>
 
-        <div className="flex justify-between lg:justify-end lg:space-x-16">
+        <div className="flex justify-between md:justify-end md:space-x-16">
           {transactions.map((transaction, index) => (
             <div key={index} className="flex items-center space-x-2 lg:space-x-4">
               <span>{transaction.icon}</span>
