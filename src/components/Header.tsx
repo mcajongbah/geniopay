@@ -43,7 +43,9 @@ const Header: React.FC<HeaderProps> = ({setIsOpen}) => {
         </div>
 
         <div className="flex items-center space-x-2 justify-center">
-          <span className="w-[26px] h-[26px] rounded-full bg-slate-500"></span>
+          <span className="w-[26px] h-[26px] rounded-full">
+            <img src="./assets/profile.png" className="object-center object-contain" alt="profile pic" />
+          </span>
           <span className="flex flex-col">
             <p className="lg:text-xs text-[10px] text-[#22C55E]">Verified</p>
             <p className="lg:text-base text-sm">Huss Smith</p>

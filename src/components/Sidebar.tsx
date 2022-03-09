@@ -54,7 +54,7 @@ const Sidebar: React.FC<SidebarProps> = ({isOpen, setIsOpen}) => {
     <aside
       className={`${
         isOpen ? "translate-x-0" : "-translate-x-full"
-      } absolute inset-0 transition-all duration-500 ease-in-out z-50 lg:translate-x-0 lg:relative lg:flex flex-col w-[316px] overflow-y-auto space-y-8 py-8 px-9 bg-primary`}
+      } absolute inset-0 transition-all duration-500 ease-in-out z-50 lg:translate-x-0 lg:relative lg:flex flex-col lg:w-[316px] w-72 overflow-y-auto space-y-8 py-8 lg:px-9 px-4 bg-primary`}
     >
       <button
         onClick={() => setIsOpen(false)}
