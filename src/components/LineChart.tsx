@@ -63,7 +63,7 @@ const LineChart: React.FC<LineChartProps> = ({}) => {
           .call((g) =>
             g
               .selectAll(".tick text")
-              .attr("class", "lg:text-2xl text-sm")
+              .attr("class", "lg:text-2xl md:text-lg text-sm")
               .attr("fill", "#2B4146")
           );
 
@@ -83,7 +83,7 @@ const LineChart: React.FC<LineChartProps> = ({}) => {
           .call((g) =>
             g
               .selectAll(".tick text")
-              .attr("class", "lg:text-2xl text-sm")
+              .attr("class", "lg:text-2xl md:text-lg text-sm")
               .attr("fill", "#2B4146")
           );
 
@@ -96,7 +96,7 @@ const LineChart: React.FC<LineChartProps> = ({}) => {
         .datum(data)
         .attr("fill", "none")
         .attr("stroke", "#008AA8")
-        .attr("class", "lg:stroke-[5.89px] stroke-2")
+        .attr("class", "lg:stroke-[5.89px] md:stroke-[3.5px] stroke-2")
         .attr("stroke-linecap", "round")
         .attr(
           "d",
